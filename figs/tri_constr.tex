@@ -1,0 +1,18 @@
+\documentclass{article}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric,calc,angles,positioning,intersections,quotes,decorations,babel,patterns,fit}
+\usepackage{tkz-euclide}
+\usetkzobj{all}
+\begin{document}
+\begin{tikzpicture}[scale =1.6,>=stealth,point/.style = {draw, circle, fill = black, inner sep = 1pt},]
+\node (A) at (8,7.8)[point,label=above :$A$] {};
+\node (B) at (0,0)[point,label=below :$B$] {};
+\node (C) at (8,0)[point,label=below :$C$] {};
+\node (D) at (10,0)[point,label=below :$D$] {};
+\draw [->,thick](A) -- node[left] {$\textrm{7.8cm}$} (B) -- node[below] {$\textrm{8cm}$} (C) -- node[above,,xshift=2mm] {$\textrm{4.3cm}$} (A);
+
+%Drawing and marking angles
+\tkzMarkRightAngle[fill=black!45,size=.3](A,B,C)
+\tkzLabelAngle[pos=0.65](A,B,C){$M$}
+\end{tikzpicture}
+\end{document}

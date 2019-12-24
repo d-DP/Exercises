@@ -1,0 +1,24 @@
+\documentclass{article}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric,calc,angles,positioning,intersections,quotes,decorations,babel,patterns,fit}
+\usepackage{tkz-euclide}
+\begin{document}
+\begin{tikzpicture}[scale =0.9,>=stealth,point/.style = {draw, circle, fill = black, inner sep = 1pt},]
+\draw (0,0)circle (8cm);
+\node (O) at (0,0)[point,label=right :$O$] {};
+\node (A) at (-6.2,5)[point,label=below :$A$] {};
+\node (B) at (6.2,5)[point,label=below :$B$] {};
+\node (C) at (-7,-4)[point,label=below :$C$] {};
+\node (D) at (7,-4)[point,label=above :$D$] {};
+\node (M) at (0,5)[point,label=above :$M$] {};
+\node (N) at (0,-4)[point,label=below :$N$] {};
+\draw (A)--node[below] {$\textbf{6cm}$}(B);
+\draw (C)--node[left] {$\textbf{8cm}$}(D);
+\draw (O)--node[left] {$\textbf{a=4cm}$}(M);
+\draw (O)--node[left] {$\textbf{x}$}(N);
+\draw (O)--node[below] {$\textbf{b}$}(B);
+\draw (O)--node[below] {$\textbf{b}$}(D);
+\draw (M)--node[below] {$\textbf{3cm}$}(B);
+\draw (N)--node[below] {$\textbf{4cm}$}(D);
+\end{tikzpicture}
+\end{document}
